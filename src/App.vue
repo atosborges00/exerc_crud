@@ -31,29 +31,17 @@ export default {
       if(confirm('Are you shure?')){
         this.workouts = this.workouts.filter((workout) => workout.id !== id)
       }
+    },
+    async fetchWorkouts(){
+      const res = await fetch('http://localhost:5000/workouts')
+
+      const data = await res.jason()
+
+      return data
     }
   },
-  created(){
-    this.workouts = [
-      {
-        id: 1,
-        time: 1,
-        text: 'Run',
-        day: '08/04/2021',
-      },
-      {
-        id: 2,
-        time: 1,
-        text: 'Walk',
-        day: '09/04/2021',
-      },
-      {
-        id: 3,
-        time: 3,
-        text: 'Gym',
-        day: '10/04/2021',
-      },
-    ]
+  async created(){
+    this.workouts = await this.fetchWorkouts()
   }
 }
 </script>
