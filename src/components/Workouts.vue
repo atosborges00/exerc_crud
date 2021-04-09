@@ -1,6 +1,6 @@
 <template>
     <div :key='workout.id' v-for="workout in workouts">
-        <Workout :workout='workout'/>
+        <Workout @delete-workout="$emit('delete-workout', workout.id)" :workout='workout'/>
     </div>
 </template>
 
@@ -14,6 +14,7 @@ export default {
     },
     components:{
         Workout
-    }
+    },
+    emits: ['delete-workout'],
 }
 </script>

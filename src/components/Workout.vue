@@ -2,7 +2,7 @@
     <div class="workout">
         <h3>
             {{ workout.text }}
-            <i class="fas fa-times"></i>
+            <i @click="$emit('delete-workout', workout.id)" class="fas fa-times"></i>
         </h3>
         <p>{{workout.day}}</p>
         <p>{{workout.time}}:00 h</p>

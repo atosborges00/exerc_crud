@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Header title='Workout Log' />
-    <Workouts :workouts = 'workouts'/>
+    <Workouts @delete-workout="deleteWorkout" :workouts = 'workouts'/>
   </div>
 </template>
 
@@ -18,6 +18,13 @@ export default {
   data(){
     return{
       workouts: []
+    }
+  },
+  methods: {
+    deleteWorkout(id){
+      if(confirm('Are you shure?')){
+        this.workouts = this.workouts.filter((workout) => workout.id !== id)
+      }
     }
   },
   created(){
