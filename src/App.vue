@@ -1,16 +1,46 @@
 <template>
   <div class="container">
     <Header title='Workout Log' />
+    <Workouts :workouts = 'workouts'/>
   </div>
 </template>
 
 <script>
 import Header from './components/Header'
+import Workouts from './components/Workouts'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Workouts,
+  },
+  data(){
+    return{
+      workouts: []
+    }
+  },
+  created(){
+    this.workouts = [
+      {
+        id: 1,
+        time: 1,
+        text: 'Run',
+        day: '08/04/2021',
+      },
+      {
+        id: 2,
+        time: 1,
+        text: 'Walk',
+        day: '09/04/2021',
+      },
+      {
+        id: 3,
+        time: 3,
+        text: 'Gym',
+        day: '10/04/2021',
+      },
+    ]
   }
 }
 </script>
