@@ -1,5 +1,8 @@
 # exerc_crud
 
+Projeto para implementação de um log de exercícios para o Imersão42
+2021-02-08
+
 ## Project setup
 ```
 npm install
