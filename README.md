@@ -1,4 +1,4 @@
-# exerc_crud
+# Primeiro Desafio Imersão42
 
 Projeto para implementação de um log de exercícios para o Imersão42
 2021-02-08
