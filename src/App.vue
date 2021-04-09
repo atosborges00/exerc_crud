@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <Header title='Workout Log' />
+    <AddWorkout @add-workout="addWorkout" />
     <Workouts @delete-workout="deleteWorkout" :workouts = 'workouts'/>
   </div>
 </template>
@@ -8,12 +9,14 @@
 <script>
 import Header from './components/Header'
 import Workouts from './components/Workouts'
+import AddWorkout from './components/AddWorkout'
 
 export default {
   name: 'App',
   components: {
     Header,
     Workouts,
+    AddWorkout,
   },
   data(){
     return{
@@ -21,6 +24,9 @@ export default {
     }
   },
   methods: {
+    addWorkout(workout){
+      this.workouts = [...this.workouts, workout]
+    },
     deleteWorkout(id){
       if(confirm('Are you shure?')){
         this.workouts = this.workouts.filter((workout) => workout.id !== id)
