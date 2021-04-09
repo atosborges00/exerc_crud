@@ -5,12 +5,12 @@
       <input type="text" v-model="text" name="text" placeholder="Add Workout" />
     </div>
     <div class="form-control">
-      <label>Day & Time</label>
+      <label>Day</label>
       <input
         type="text"
         v-model="day"
         name="day"
-        placeholder="Add Day & Time"
+        placeholder="Add Day"
       />
     </div>
     <div class="form-control">
@@ -22,7 +22,7 @@
         placeholder="Add Time Spent"
       />
     </div>
-    <input type="submit" value="Save Task" class="btn btn-block" />
+    <input type="submit" value="Add" class="btn btn-block" />
   </form>
 </template>
 
