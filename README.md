@@ -1,7 +1,10 @@
-# Segundo Desafio Imersão42
+# Second challange - Imersão42
 
-Projeto para implementação de um log de exercícios para o Imersão42
-2021-02-08
+Mini project for developing a static page using the Vue.js framework as an educational challenge. Started in 05/2021, this one-week challenge had the objective of introducing a frontend framework for students.
+
+The static webpage does simple CRUD operation. It works as a log for daily workouts. It can register a new workout (type, date, and duration), shows the already registered workouts, and delete any previous entry.
+
+To check it out follow the instruction about the setup
 
 ## Project setup
 ```
